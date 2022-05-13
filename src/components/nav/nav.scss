@@ -1,0 +1,21 @@
+.nav {
+  position: relative;
+  z-index: 10;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.menu__link {
+  position: relative;
+  display: block;
+  padding: 0.5em 1em;
+
+  &.active {
+    color: $color-accent;
+  }
+
+}

@@ -1,0 +1,69 @@
+{
+  "name": "pfg-starter",
+  "version": "0.1.0",
+  "description": "Start template with Elevetny, Gulp and Webpack",
+  "type": "module",
+  "browserslist": [
+    "last 2 version",
+    "> 1%"
+  ],
+  "scripts": {
+    "dev:11ty": "npx @11ty/eleventy --serve --config=.eleventy.cjs",
+    "dev": "concurrently \"gulp\" \"npm:dev:11ty\"",
+    "build": "cross-env MODE=production gulp build & npx @11ty/eleventy --config=.eleventy.cjs",
+    "bench": "set DEBUG=Eleventy:Benchmark* & npx @11ty/eleventy --config=.eleventy.cjs",
+    "debug": "set DEBUG=* & npx @11ty/eleventy --config=.eleventy.cjs",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "PFG",
+  "homepage": "https://github.com/",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "autoprefixer": "^10.4.4",
+    "babel-loader": "^8.2.4",
+    "concurrently": "^7.1.0",
+    "cross-env": "^7.0.3",
+    "del": "^6.0.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.2",
+    "gulp": "^4.0.2",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.8",
+    "postcss": "^8.4.12",
+    "postcss-csso": "^6.0.0",
+    "postcss-sort-media-queries": "^4.2.1",
+    "prettier": "2.6.2",
+    "sass": "^1.50.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ],
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.{js,css,json,scss,md}": "prettier --write"
+  }
+}

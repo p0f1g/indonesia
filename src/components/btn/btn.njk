@@ -1,0 +1,20 @@
+{% macro btn(props) %}
+  {% if props.href %}
+    <a class='btn {% if props.className %}{{ props.className }}{% endif %}' href={{ props.href }}
+    {% if props.blank %}target='_blank'{% endif %}>{{props.text}}</a>
+  {% else %}
+    <button
+      class='btn {% if props.className %}{{ props.className }}{% endif %}'>{{ props.text }}</button>
+  {% endif %}
+{% endmacro %}
+
+{#
+  how to use
+{% from './btn/btn.njk' import btn %}
+{{
+  btn({
+    href: '#',
+    className: '',
+    text: 'Contact me!'
+  })
+}} #}

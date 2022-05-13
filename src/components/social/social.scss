@@ -1,0 +1,18 @@
+.social {
+  display: flex;
+  align-items: center;
+}
+
+.social__link {
+  display: flex;
+  padding: 7px;
+  text-decoration: none;
+}
+
+.social__icon {
+  transition: fill 0.25s ease;
+}
+
+.social__link:hover .social__icon {
+  fill: $color-accent;
+}

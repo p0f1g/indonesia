@@ -1,0 +1,13 @@
+<ul class='social'>
+  {% for key, social in site.socials %}
+    <li class='social__item'>
+      <a href='{{social.url}}' class='social__link' target='_blank'>
+        <svg class='social__icon' width='24' height='24'>
+          <title>{{key}}</title>
+          <use xlink:href='images/svg/sprite.svg#{{key}}'></use>
+        </svg>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+

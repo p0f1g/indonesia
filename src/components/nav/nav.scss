@@ -26,9 +26,10 @@
     width: min(75vw, 270px);
     min-height: 100vh;
     text-align: center;
-    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
     z-index: 9;
-    transition: transform 0.5s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    transition: transform 0.5s cubic-bezier(0.62, 0.07, 0, 0.7);
     transform: translateX(100%);
   }
 }

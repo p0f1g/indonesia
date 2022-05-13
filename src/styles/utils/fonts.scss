@@ -5,7 +5,7 @@
   $font-style: normal
 ) {
   @font-face {
-    $font-path: '/fonts/#{$file-name}';
+    $font-path: '../fonts/#{$file-name}';
     font-family: '#{$family-name}';
     font-display: swap;
     src: url($font-path + '.woff2') format('woff2'),

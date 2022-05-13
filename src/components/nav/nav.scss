@@ -6,16 +6,39 @@
 .menu {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
+
+  @include media-up(md) {
+    gap: 50px;
+  }
+
+  &.is-open {
+    transform: translateX(0%);
+  }
+
+  @include media-down(md) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(75vw, 270px);
+    min-height: 100vh;
+    text-align: center;
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    z-index: 9;
+    transition: transform 0.5s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    transform: translateX(100%);
+  }
 }
 
 .menu__link {
   position: relative;
   display: block;
-  padding: 0.5em 1em;
+  font-size: 1rem;
 
   &.active {
     color: $color-accent;
   }
-
 }

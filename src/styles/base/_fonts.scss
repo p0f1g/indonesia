@@ -1,1 +1,11 @@
-//@include font-face($family-name: Roboto, $file-name: Roboto-Regular);
+@include font-face($family-name: 'Open Sans', $file-name: OpenSans-Regular);
+@include font-face(
+  $family-name: 'Open Sans',
+  $file-name: OpenSans-SemiBold,
+  $font-weight: 600
+);
+@include font-face(
+  $family-name: 'Open Sans',
+  $file-name: OpenSans-Bold,
+  $font-weight: 700
+);

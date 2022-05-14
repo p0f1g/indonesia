@@ -1,0 +1,152 @@
+.about {
+  max-width: 1460px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.sights {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.sights--wide {
+  position: relative;
+
+  .sights__decription {
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    text-align: center;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+
+    @include media-up(sm) {
+      padding: 10px 5% 10px;
+    }
+
+    @include media-up(md) {
+      padding: 10px 10% 20px;
+    }
+
+    @include media-up(xl) {
+      padding: 10px 15% 40px;
+    }
+  }
+
+  @include media-down(sm) {
+    .sights__text {
+      display: none;
+    }
+  }
+
+  .tagline {
+    margin-bottom: 1.2em;
+  }
+
+  .read-more {
+    align-self: center;
+  }
+}
+
+.sights--row,
+.sights--row-revers {
+  @include media-up(sm) {
+    flex-direction: row;
+    gap: 7vw;
+  }
+
+  .sights__img {
+    flex-basis: 40%;
+    flex-shrink: 0;
+  }
+}
+
+.sights--row-revers {
+  @include media-up(sm) {
+    flex-direction: row-reverse;
+  }
+
+  @include media-up(md) {
+    .sights__decription {
+      padding-left: 25px;
+    }
+  }
+}
+
+.sights__img {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.sights__decription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sights__text {
+  line-height: 1.5;
+  margin-bottom: 1em;
+
+  @include media-up(md) {
+    line-height: 1.7;
+  }
+  @include media-up(lg) {
+    margin-bottom: 1.5em;
+  }
+}
+
+.subtitle {
+  font-size: clamp(26px, 5vw, 64px);
+  font-weight: 700;
+  line-height: 1.36;
+  margin-bottom: 0.4em;
+}
+
+.read-more {
+  color: $color-accent;
+  align-self: center;
+
+  @include media-up(sm) {
+    align-self: flex-start;
+  }
+
+  &:hover {
+    color: darken($color-accent, 5%);
+  }
+
+  &:hover::after {
+    margin-left: 0.7em;
+  }
+
+  &::after {
+    content: '\2192';
+    margin-left: 0.5em;
+    font-size: 1.2em;
+    transition: margin-left 0.2s ease;
+  }
+}
+
+.sights-slider {
+  margin: 55px 0;
+
+  @include media-up(sm) {
+    margin: 70px 0;
+  }
+  @include media-up(md) {
+    margin: 90px 0;
+  }
+  @include media-up(xl) {
+    margin: 150px 0;
+  }
+}

@@ -2,30 +2,34 @@
   display: inline-block;
   margin: 0;
   border-radius: $border-radius;
-  // border: 1px solid $color-accent;
   border: 0;
-  padding: 0.75rem 1rem;
+  padding: 1em 2em;
   vertical-align: middle;
   white-space: nowrap;
   text-overflow: ellipsis;
   user-select: none;
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: inherit;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1;
   text-decoration: none;
   text-transform: none;
-  color: $color-text;
-  background-color: transparent;
+  color: $color-dark;
+  background-color: $color-btn;
   background-image: none;
   cursor: pointer;
+  transition: background-color 0.25s ease;
+
+  @include media-up(sm) {
+    padding: 1.4em 4em;
+  }
 
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $color-text;
-    background-color: darken($color-accent, 10%);
+    color: $color-dark;
+    background-color: darken($color-btn, 10%);
   }
 
   // &:visited {

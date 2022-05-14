@@ -1,11 +1,14 @@
 .social {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  gap: 25px;
 }
 
 .social__link {
   display: flex;
-  padding: 7px;
+  padding: 5px;
   text-decoration: none;
 }
 

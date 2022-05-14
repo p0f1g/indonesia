@@ -1,3 +1,90 @@
+{% from 'btn/btn.njk' import btn %}
 <footer class='footer'>
+  <div class='footer__top-line'>
+    {% include '../../logo/logo.njk' %}
+    <div class='get-start'>
+      <div class='get-start__text'>Ready to explore?</div>
+      {{
+        btn({
+          href: '#',
+          className: '',
+          text: 'Get started'
+        })
+      }}
+    </div>
+  </div>
 
+  <div class='footer__top'>
+    <form class='form-subsribe'>
+      <h4 class='form-title'>Let's go on vacation,<br> Make your day</h4>
+      <div class='form-field'>
+        <input class='form-control' placeholder='Email address' type='email' name='email' required>
+        <button type='submit' class='form-btn'>
+          <svg width='27' height='27'>
+            <use xlink:href='images/svg/sprite.svg#arrow-right'></use>
+          </svg>
+        </button>
+      </div>
+    </form>
+
+    <div class='footer__nav'>
+      <ul class='nav-list'>
+        <li class='nav-list__item'>
+          <a class='nav-list__link' href=''>Services</a>
+        </li>
+        <li class='nav-list__item'>
+          <a class='nav-list__link' href=''>Email Marketing</a>
+        </li>
+        <li class='nav-list__item'>
+          <a class='nav-list__link' href=''>Campaigns</a>
+        </li>
+        <li class='nav-list__item'>
+          <a class='nav-list__link' href=''>Branding</a>
+        </li>
+        <li class='nav-list__item'>
+          <a class='nav-list__link' href=''>Offline</a>
+        </li>
+      </ul>
+      <ul class='nav-list'>
+        <li class='nav-list__item'>
+          <a class='nav-list__link' href=''>About</a>
+        </li>
+        <li class='nav-list__item'>
+          <a class='nav-list__link' href=''>Our Story</a>
+        </li>
+        <li class='nav-list__item'>
+          <a class='nav-list__link' href=''>Benefits</a>
+        </li>
+        <li class='nav-list__item'>
+          <a class='nav-list__link' href=''>Team</a>
+        </li>
+        <li class='nav-list__item'>
+          <a class='nav-list__link' href=''>Careers</a>
+        </li>
+      </ul>
+      <ul class='nav-list'>
+        <li class='nav-list__item'>
+          <a class='nav-list__link' href=''>Help</a>
+        </li>
+        <li class='nav-list__item'>
+          <a class='nav-list__link' href=''>FAQs</a>
+        </li>
+        <li class='nav-list__item'>
+          <a class='nav-list__link' href=''>Contact Us</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class='footer__bottom'>
+    <div class='footer__privacy'>
+      <a href='#'>Terms &amp; Conditions</a>
+      <a href='#'>Privacy Policy</a>
+    </div>
+
+    {% include 'social/social.njk' %}
+  </div>
+
+  <div class='copyright'>Copyright 2022 QWERy</div>
 </footer>

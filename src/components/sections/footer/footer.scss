@@ -52,7 +52,15 @@
   }
 }
 
-.nav-list__item {
+.menu-title {
+  color: $color-accent;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.menu-list__item {
   &:not(:last-child) {
     margin-bottom: 10px;
   }

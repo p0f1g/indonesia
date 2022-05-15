@@ -6,6 +6,11 @@
   width: 100%;
   padding-top: 18px;
   padding-bottom: 10px;
+  transition: background-color 0.25s ease, padding 0.25s ease;
+  &--scrolled {
+    padding-top: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
 }
 
 .header__container {
